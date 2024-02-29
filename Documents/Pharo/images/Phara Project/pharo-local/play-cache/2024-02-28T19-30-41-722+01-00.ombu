@@ -1,0 +1,37 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:30:44.244+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '| userInput |\rTranscript show: \'Veuillez saisir une valeur : \'; flush.\ruserInput := Sensor keyboard readLine.\rTranscript show: \'Vous avez saisi : \', userInput; cr.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:31:42.274+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| userInput |\rUIManager default informUser: \'Veuillez saisir une valeur : \' during: [\r    userInput := (FileStream stdin nextLine) asString.\r].\rTranscript show: \'Vous avez saisi : \', userInput; cr.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:33:05.13+01:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| userInput |\rUIManager default informUser: \'Veuillez saisir une valeur : \' during: [\r    userInput := (StandardFileStream stdin nextLine) asString.\r].\rTranscript show: \'Vous avez saisi : \', userInput; cr.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:35:01.689+01:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : 'Object subclass: SparseMatrixEncoder [\r    SparseMatrixEncoder>>encodeSparse: matrix [\r        | sparseMatrix |\r        sparseMatrix := Dictionary new.\r        \r        matrix withIndexDo: [ :row :i |\r            row withIndexDo: [ :value :j |\r                (value = 0) ifFalse: [\r                    (sparseMatrix at: i ifAbsentPut: [Dictionary new]) at: j put: value.\r                ].\r            ].\r        ].\r        \r        ^sparseMatrix.\r    ]\r\r    SparseMatrixEncoder>>decodeSparse: sparseMatrix rowCount: rowCount columnCount: columnCount [\r        | matrix |\r        matrix := { {0. . columnCount - 1} asOrderedCollection. (1 to: columnCount) asOrderedCollection } asOrderedCollection: rowCount.\r\r        sparseMatrix keysAndValuesDo: [ :row :columns |\r            columns keysAndValuesDo: [ :column :value |\r                matrix at: row at: column put: value.\r            ].\r        ].\r\r        ^matrix.\r    ]\r]\r\r"Exemple d\'utilisation :"\r\r| matrix sparseMatrix decodedMatrix |\rmatrix := #( #(1 0 0 0) #(0 0 2 0) #(0 3 0 0) #(0 0 0 4) ).\r\r"Encoder la matrice sous sa forme creuse"\rsparseMatrix := SparseMatrixEncoder encodeSparse: matrix.\rsparseMatrix inspect.\r\r"Décoder la matrice creuse"\rdecodedMatrix := SparseMatrixEncoder decodeSparse: sparseMatrix rowCount: 4 columnCount: 4.\rdecodedMatrix inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:35:27.986+01:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : 'Object subclass: SparseMatrixEncoder [\r    SparseMatrixEncoder>>encodeSparse: matrix [\r        | sparseMatrix |\r        sparseMatrix := Dictionary new.\r        \r        matrix withIndexDo: [ :row :i |\r            row withIndexDo: [ :value :j |\r                (value = 0) ifFalse: [\r                    (sparseMatrix at: i ifAbsentPut: [Dictionary new]) at: j put: value.\r                ].\r            ].\r        ].\r        \r        ^sparseMatrix.\r    ]\r\r    SparseMatrixEncoder>>decodeSparse: sparseMatrix rowCount: rowCount columnCount: columnCount [\r        | matrix |\r        matrix := { {0. . columnCount - 1} asOrderedCollection. (1 to: columnCount) asOrderedCollection } asOrderedCollection: rowCount.\r\r        sparseMatrix keysAndValuesDo: [ :row :columns |\r            columns keysAndValuesDo: [ :column :value |\r                matrix at: row at: column put: value.\r            ].\r        ].\r\r        ^matrix.\r    ]\r]\r\r"Exemple d\'utilisation :"\r\r| matrix sparseMatrix decodedMatrix |\rmatrix := #( #(1 0 0 0) #(0 0 2 0) #(0 3 0 0) #(0 0 0 4) ).\r\r"Encoder la matrice sous sa forme creuse"\rsparseMatrix := SparseMatrixEncoder new encodeSparse: matrix.\rsparseMatrix inspect.\r\r"Décoder la matrice creuse"\rdecodedMatrix := (SparseMatrixEncoder new) decodeSparse: sparseMatrix rowCount: 4 columnCount: 4.\rdecodedMatrix inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:35:48.823+01:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : 'Object subclass: SparseMatrixEncoder [\r    SparseMatrixEncoder>>encodeSparse: matrix [\r        | sparseMatrix |\r        sparseMatrix := Dictionary new.\r        \r        matrix withIndexDo: [ :row :i |\r            row withIndexDo: [ :value :j |\r                (value = 0) ifFalse: [\r                    (sparseMatrix at: i ifAbsentPut: [Dictionary new]) at: j put: value.\r                ].\r            ].\r        ].\r        \r        ^sparseMatrix.\r    ]\r\r    SparseMatrixEncoder>>decodeSparse: sparseMatrix rowCount: rowCount columnCount: columnCount [\r        | matrix |\r        matrix := { {0. . columnCount - 1} asOrderedCollection. (1 to: columnCount) asOrderedCollection } asOrderedCollection: rowCount.\r\r        sparseMatrix keysAndValuesDo: [ :row :columns |\r            columns keysAndValuesDo: [ :column :value |\r                matrix at: row at: column put: value.\r            ].\r        ].\r\r        ^matrix.\r    ]\r]\r\r'
+}

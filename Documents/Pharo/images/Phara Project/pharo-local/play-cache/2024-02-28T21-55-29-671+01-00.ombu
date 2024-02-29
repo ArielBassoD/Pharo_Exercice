@@ -1,0 +1,31 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T21:55:31.549+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Object subclass: HelloWorld [\r    HelloWorld class >> sayHello [\r        Transcript show: \'Hello, World!\'; nl.\r    ].\r].\r\rHelloWorld sayHello.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T21:59:55.009+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| nombre1 nombre2 somme |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Calculer la somme"\rsomme := nombre1 + nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', somme printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T22:01:01.542+01:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| nombre1 nombre2 somme |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' : \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Calculer la somme"\rsomme := nombre1 + nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', somme printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T22:01:32.011+01:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '| nombre1 nombre2 somme |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Calculer la somme"\rsomme := nombre1 + nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', somme printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T22:05:40.265+01:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '| nombre1 nombre2 somme |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Calculer la somme"\rsomme := nombre1 + nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', somme printString; nl.\r'
+}

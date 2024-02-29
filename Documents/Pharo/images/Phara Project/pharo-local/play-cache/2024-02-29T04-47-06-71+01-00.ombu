@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:47:10.595+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '| nombre1 nombre2 somme |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Calculer la somme"\rsomme := nombre1 + nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', somme printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:51:19.364+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| n matrice |\r\r"Demander à l\'utilisateur la taille de la matrice"\rn := (UIManager default request: \'Entrez la taille de la matrice:\' translated initialAnswer: \'\') asInteger.\r\r"Initialiser la matrice avec la taille spécifiée"\rmatrice := Array2D new: n rows: n.\r\r"Demander à l\'utilisateur d\'entrer les coefficients de la matrice"\r1 to: n do: [ :i |\r    1 to: n do: [ :j |\r        matrice at: i at: j put: (UIManager default request: \'Entrez le coefficient (\', i printString, \',\', j printString, \'):\' translated initialAnswer: \'\') asNumber.\r    ].\r].\r\r"Afficher la matrice résultante dans la fenêtre Transcript"\rTranscript show: \'Matrice résultante :\', matrice printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:52:57.439+01:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| n matrice |\r\r"Demander à l\'utilisateur la taille de la matrice"\rn := (UIManager default request: \'Entrez la taille de la matrice:\' translated initialAnswer: \'\') asInteger.\r\r"Initialiser la matrice avec la taille spécifiée"\rmatrice := (1 to: n) collect: [ :i |\r    (1 to: n) collect: [ :j |\r        (UIManager default request: \'Entrez le coefficient (\', i printString, \',\', j printString, \'):\' translated initialAnswer: \'\') asNumber\r    ].\r].\r\r"Afficher la matrice résultante dans la fenêtre Transcript"\rTranscript show: \'Matrice résultante :\', matrice printString; nl.\r'
+}

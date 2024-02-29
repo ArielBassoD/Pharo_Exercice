@@ -1,0 +1,1 @@
+| matrice |matrice := { {1. 2. 3.}. {4. 5. 6.} }.matrice do: [ :row |    row do: [ :element |        Transcript show: element printString, ' '.    ].    Transcript show: ''; nl.].

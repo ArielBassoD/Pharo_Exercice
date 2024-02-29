@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T21:49:58.253+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Object subclass: HelloWorld [\r    HelloWorld class >> sayHello [\r        Transcript show: \'Hello, World!\'; nl.\r    ].\r].\r\rHelloWorld sayHello.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T21:50:04.115+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'Object subclass: HelloWorld [\r    HelloWorld class >> sayHello [\r        Transcript show: \'Hello, World!\'; nl.\r    ].\r].\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T21:50:23.083+01:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'Object subclass: HelloWorld [\r    HelloWorld class >> sayHello [\r        Transcript show: \'Hello, World!\'; nl.\r    ].\r].\r\rHelloWorld sayHello.\r'
+}

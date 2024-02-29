@@ -1,0 +1,8 @@
+PhLImage {
+	#originTemplate : PhLRemoteTemplate {
+		#name : 'Pharo 11.0 - 64bit (stable)',
+		#url : URL [ 'https://files.pharo.org/image/110/latest-64.zip' ]
+	},
+	#launchConfigurations : OrderedCollection [ ],
+	#shouldRunInitializationScript : true
+}

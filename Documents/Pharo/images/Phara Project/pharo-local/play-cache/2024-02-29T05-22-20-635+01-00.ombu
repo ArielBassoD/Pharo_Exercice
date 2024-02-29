@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T05:22:36.844+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '| matrice |\r\rmatrice := { {1. 2. 3.}. {4. 5. 6.} }.\r\rdisplayMatrix: aMatrix [\r    aMatrix do: [ :row |\r        row do: [ :element |\r            Transcript show: element printString, \' \'.\r        ].\r        Transcript show: \'\'; nl.\r    ].\r].\r\r"Exemple d\'utilisation"\rdisplayMatrix: matrice.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T05:22:58.353+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| matrice |\r\rmatrice := { {1. 2. 3.}. {4. 5. 6.} }.\r\rmatrice do: [ :row |\r    row do: [ :element |\r        Transcript show: element printString, \' \'.\r    ].\r    Transcript show: \'\'; nl.\r].\r'
+}

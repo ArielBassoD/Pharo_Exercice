@@ -1,0 +1,37 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:15:19.116+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '| monTableau |\rmonTableau := #(1 2 3 4 5).\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:15:36.139+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| monTableau |\rmonTableau := Array with: 1 with: 2 with: 3 with: 4 with: 5.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:15:49.615+01:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| monTableau |\rmonTableau := #(1 2 3 4 5).\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:16:02.188+01:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '| monTableau |\rmonTableau := #(10 123 223 214 15).\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:21:19.655+01:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '\'Hello, World!\' displayNl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-28T19:22:43.211+01:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : 'Transcript show: \'Votre message ici\'; cr.\r'
+}

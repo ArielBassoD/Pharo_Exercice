@@ -1,0 +1,49 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:55:06.997+01:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Object subclass: SparseMatrixEncoder [\r    SparseMatrixEncoder class >> encodeToSparse: traditionalMatrix [\r        | sparseMatrix |\r        sparseMatrix := Dictionary new.\r        \r        traditionalMatrix withIndexDo: [ :rowArray :rowIndex |\r            rowArray withIndexDo: [ :value :colIndex |\r                value = 0 ifFalse: [\r                    sparseMatrix at: (rowIndex, colIndex) put: value.\r                ].\r            ].\r        ].\r        \r        ^ sparseMatrix.\r    ]\r\r    SparseMatrixEncoder class >> decodeToTraditional: sparseMatrix [\r        | traditionalMatrix |\r        traditionalMatrix := {#() } copy: sparseMatrix size.\r        \r        sparseMatrix keysAndValuesDo: [ :position :value |\r            | row col |\r            row := position first.\r            col := position second.\r            traditionalMatrix at: row put: (traditionalMatrix at: row) copyReplaceFrom: col to: col with: (Array with: value).\r        ].\r        \r        ^ traditionalMatrix.\r    ]\r].\r\r"Exemple d\'utilisation"\r| matriceTraditionnelle matriceCreuse |\r\r"Matrice traditionnelle (tableau de tableaux)"\rmatriceTraditionnelle := { {1. 0. 0. 0.}. {0. 2. 0. 0.}. {0. 0. 0. 0.}. {0. 0. 3. 0.} }.\r\r"Encodage de la matrice traditionnelle vers une matrice creuse"\rmatriceCreuse := SparseMatrixEncoder encodeToSparse: matriceTraditionnelle.\r\r"Affichage de la matrice creuse"\rTranscript show: \'Matrice creuse :\', matriceCreuse printString; nl.\r\r"Décodage de la matrice creuse vers une matrice traditionnelle"\rmatriceTraditionnelle := SparseMatrixEncoder decodeToTraditional: matriceCreuse.\r\r"Affichage de la matrice traditionnelle"\rTranscript show: \'Matrice traditionnelle :\', matriceTraditionnelle printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:55:54.454+01:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| somme |\r\rsomme := [ :nombre1 :nombre2 |\r    ^ nombre1 + nombre2.\r].\r\r"Exemple d\'utilisation"\r| resultat |\rresultat := somme value: 5 value: 7.\rTranscript show: \'La somme est : \', resultat printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:57:46.227+01:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| somme |\r\rsomme := [ :nombre1 :nombre2 |\r    ^ nombre1 + nombre2.\r].\r\r| nombre1 nombre2 resultat |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Utiliser la fonction somme pour calculer la somme"\rresultat := somme value: nombre1 value: nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', resultat printString; nl.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:58:09.02+01:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '| nombre1 nombre2 resultat |\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Utiliser la fonction somme pour calculer la somme"\rresultat := somme value: nombre1 value: nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', resultat printString; nl.\r\r\r| somme |\r\rsomme := [ :nombre1 :nombre2 |\r    ^ nombre1 + nombre2.\r].\r\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:58:36.387+01:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '| nombre1 nombre2 resultat somme|\r\rsomme := [ :nombre1 :nombre2 |\r    ^ nombre1 + nombre2.\r].\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Utiliser la fonction somme pour calculer la somme"\rresultat := somme value: nombre1 value: nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', resultat printString; nl.\r\r\r\r\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:58:54.27+01:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : '| nombre1 nombre2 resultat somme|\r\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Utiliser la fonction somme pour calculer la somme"\rresultat := somme value: nombre1 value: nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', resultat printString; nl.\r\rsomme := [ :nombre1 :nombre2 |\r    ^ nombre1 + nombre2.\r].\r\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T04:59:17.569+01:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : '| nombre1 nombre2 resultat somme|\r\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Utiliser la fonction somme pour calculer la somme"\rresultat := somme value: nombre1 value: nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', resultat printString; nl.\r\rsomme := [ :a :b |\r    ^ a + b.\r].\r\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2024-02-29T05:00:23.109+01:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : '| nombre1 nombre2 resultat somme|\r\rsomme := [ :a :b |\r    ^ a + b.\r].\r\r"Demander à l\'utilisateur le premier nombre"\rnombre1 := (UIManager default request: \'Entrez le premier nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Demander à l\'utilisateur le deuxième nombre"\rnombre2 := (UIManager default request: \'Entrez le deuxième nombre:\' translated initialAnswer: \'\') asNumber.\r\r"Utiliser la fonction somme pour calculer la somme"\rresultat := somme value: nombre1 value: nombre2.\r\r"Afficher le résultat dans la fenêtre Transcript"\rTranscript show: \'La somme de \', nombre1 printString, \' et \', nombre2 printString, \' est \', resultat printString; nl.\r\r\r\r'
+}
